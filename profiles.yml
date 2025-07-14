@@ -1,0 +1,10 @@
+mock_dbt_transform:
+  outputs:
+    dev:
+      type: duckdb
+      path: "../db/mock_game_studio_metrics.db"
+      port: 5432
+      extensions:
+        - httpfs
+      threads: 4
+  target: dev

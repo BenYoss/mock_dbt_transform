@@ -1,0 +1,69 @@
+models:
+  - name: daily_app_revenue_vs_ad_revenue_ratio_gd
+    description: Daily comparison of total app revenue and ad revenue, grouped by event date.
+    columns:
+      - name: app_revenue
+        description: The total revenue generated from the app (in-app purchases and other sources) for the day.
+      - name: ad_revenue
+        description: The total revenue generated from advertisements for the day.
+      - name: event_date
+        description: The date for which the revenue metrics are calculated.
+  - name: engage_rate_gd
+    description: Daily user engagement metrics, including retention, time spent, and engagement index.
+    columns:
+      - name: user_retention_rate
+        description: The sum of user retention rates for the day.
+      - name: avg_time_spent
+        description: The sum of average time spent by users for the day.
+      - name: engagement_index
+        description: The average engagement index for the day.
+      - name: event_date
+        description: The date for which the engagement metrics are calculated.
+  - name: payback_period_gd
+    description: Daily payback period analysis, including ad spend, ad revenue, app revenue, and payback period.
+    columns:
+      - name: ad_spend
+        description: The total advertising spend for the day.
+      - name: ad_revenue
+        description: The total advertising revenue for the day.
+      - name: app_revenue
+        description: The total app revenue for the day.
+      - name: payback_period
+        description: The average payback period for the day.
+      - name: event_date
+        description: The date for which the payback period metrics are calculated.
+  - name: revenue_per_download_gd
+    description: Daily metrics on downloads, app revenue, and revenue per download.
+    columns:
+      - name: downloads
+        description: The total number of downloads for the day.
+      - name: app_revenue
+        description: The total app revenue for the day.
+      - name: app_revenue_ratio
+        description: The average app revenue ratio for the day.
+      - name: revenue_per_download
+        description: The total revenue per download for the day.
+      - name: event_date
+        description: The date for which the revenue per download metrics are calculated.
+  - name: revenue_ratio_gd
+    description: Daily advertising spend and revenue ratios.
+    columns:
+      - name: ad_spend
+        description: The total advertising spend for the day.
+      - name: ad_revenue
+        description: The total advertising revenue for the day.
+      - name: ad_revenue_ratio
+        description: The average advertising revenue ratio for the day.
+      - name: event_date
+        description: The date for which the advertising revenue ratio metrics are calculated.
+  - name: roas_gd
+    description: Daily return on ad spend (ROAS) metrics.
+    columns:
+      - name: ad_spend
+        description: The total advertising spend for the day.
+      - name: ad_revenue
+        description: The total advertising revenue for the day.
+      - name: return_on_ad_spend
+        description: The average return on ad spend (ROAS) for the day.
+      - name: event_date
+        description: The date for which the ROAS metrics are calculated.

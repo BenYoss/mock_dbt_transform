@@ -1,0 +1,98 @@
+models:
+  - name: ad_metrics_sr
+    description: Dimension related to advertisement data.
+    columns:
+      - name: ad_spend
+        description: The amount spent on an ad campaign.
+      - name: ad_revenue
+        description: Keeps track of the advertisement revenue earned.
+      - name: roas
+        description: Is the Return on Ad Spend (ROAS) that takes the ad revenue and ad spend.
+      - name: ad_revenue_ratio
+        description: Is the ratio of revenue for ad campaigns.
+      - name: payback_period
+        description: The amount of profit from ad revenue.
+      - name: hrly_timestamp
+        description: Raw timestamp in hours.
+      - name: hour_of_day
+        description: Hour of the day
+      - name: day_of_month
+        description: Day of the week in a month.
+      - name: month_of_year
+        description: Year.
+      - name: event_date
+        description: Timestamp in datetime format.
+
+  - name: app_metrics_sr
+    description: Dimension related to mobile game data.
+    columns:
+      - name: app_purchases
+        description: Number of purchases for the app.
+      - name: app_revenue
+        description: Revenue earned from an app.
+      - name: downloads
+        description: Number of downloads of the app by users.
+      - name: cost_per_download
+        description: The average cost per download.
+      - name: app_revenue_ratio
+        description: The amount of revenue ratio earned from the app.
+      - name: revenue_per_download
+        description: The amount of revenue earned from each download.
+      - name: hrly_timestamp
+        description: Raw timestamp in hours.
+      - name: hour_of_day
+        description: Hour of the day
+      - name: day_of_month
+        description: Day of the week in a month.
+      - name: month_of_year
+        description: Year.
+      - name: event_date
+        description: Timestamp in datetime format.
+
+  - name: user_aquisition_metrics_sr
+    description: Cleaned ingested user aquisition data from data source.
+    columns:
+      - name: ad_spend
+        description: The amount spent on advertising campaigns.
+      - name: user_retention_rate
+        description: The percentage of users who continue using the app over time.
+      - name: downloads
+        description: The number of times the app has been downloaded by users.
+      - name: avg_time_spent
+        description: The average time users spend in the app per session.
+      - name: ad_revenue
+        description: Revenue generated from advertising activities.
+      - name: game_revenue
+        description: Revenue generated from in-game purchases and transactions.
+      - name: app_purchases
+        description: The number of in-app purchases made by users.
+      - name: hrly_timestamp
+        description: Raw timestamp data in hourly format.
+      - name: hour_of_day
+        description: The hour of the day when the event occurred.
+      - name: day_of_month
+        description: The day of the month when the event occurred.
+      - name: month_of_year
+        description: The month of the year when the event occurred.
+      - name: event_date
+        description: The date when the event occurred in datetime format.
+
+  - name: user_metrics_sr
+    description: User behavior and engagement metrics for mobile game analytics.
+    columns:
+      - name: user_retention_rate
+        description: The percentage of users who continue using the app over time.
+      - name: avg_time_spent
+        description: The average time users spend in the app per session.
+      - name: engagement_index
+        description: A composite score measuring overall user engagement with the app.
+      - name: hrly_timestamp
+        description: Raw timestamp data in hourly format.
+      - name: hour_of_day
+        description: The hour of the day when the event occurred.
+      - name: day_of_month
+        description: The day of the month when the event occurred.
+      - name: month_of_year
+        description: The month of the year when the event occurred.
+      - name: event_date
+        description: The date when the event occurred in datetime format.

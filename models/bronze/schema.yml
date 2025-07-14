@@ -1,0 +1,20 @@
+models:
+  - name: user_aquisition_metrics_bz
+    description: Dimension related to advertisement data.
+    columns:
+      - name: ad_spend
+        description: The total amount of money spent on advertising campaigns.
+      - name: user_retention_rate
+        description: The percentage of users who return to the app after their first visit.
+      - name: downloads
+        description: The total number of times the app was downloaded.
+      - name: avg_time_spent
+        description: The average amount of time users spend in the app.
+      - name: ad_revenue
+        description: The total revenue generated from advertisements.
+      - name: game_revenue
+        description: The total revenue generated from in-game purchases or activities.
+      - name: app_purchases
+        description: The total number of in-app purchases made by users.
+      - name: hrly_timestamp
+        description: The timestamp (at hourly granularity) when the metric was recorded.
