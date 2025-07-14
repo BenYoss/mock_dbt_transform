@@ -7,11 +7,7 @@ SELECT
    COALESCE(advertising_revenue, 0) AS ad_revenue,
    COALESCE(in_game_revenue, 0) AS game_revenue,
    COALESCE(in_app_purchases, 0) AS app_purchases,
-   {% if target.type == 'duckdb' %}
-      COALESCE(date_created, DATE '1900-01-01')
-   {% else %}
-      COALESCE({{ target.schema }}.cast_timestamp_udf(date_created), DATE '1900-01-01')
-   {% endif %} AS hrly_timestamp
+   COALESCE(date_created, DATE '1900-01-01') AS hrly_timestamp
  FROM
     app_marketing_metrics
  WHERE 
