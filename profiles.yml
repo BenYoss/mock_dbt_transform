@@ -1,10 +1,17 @@
 mock_dbt_transform:
   outputs:
     dev:
-      type: duckdb
-      path: "../db/mock_game_studio_metrics.db"
-      port: 5432
-      extensions:
-        - httpfs
-      threads: 4
+      type: snowflake
+      account: "{{env_var('DBT_SNOWFLAKE_ACCOUNT')}}"
+      user: "{{env_var('DBT_SNOWFLAKE_USER')}}"
+      password: "{{env_var('DBT_SNOWFLAKE_PASSWORD')}}"
+      role: TRANSFORMER
+      warehouse: "{{env_var('DBT_SNOWFLAKE_WAREHOUSE')}}"
+      database: "{{env_var('DBT_SNOWFLAKE_DATABASE')}}"
+      schema: "{{env_var('DBT_SNOWFLAKE_SCHEMA')}}"
+      threads: 1
+      client_session_keep_alive: False
+      port: 443
+      connection_retries: 0
+
   target: dev
